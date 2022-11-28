@@ -26,11 +26,11 @@ Se você gostou do projeto ou se te ajudou, por favor dê uma estrela ;)
 ## Arquitetura:
 
 - Arquitetura completa com preocupações de separação de responsabilidades, SOLID e Clean Code
-- Domain Driven Design (Camadas e Padrão de Modelo de Domínio)
+- Domain Driven Design
 - Domain Events
 - Domain Notification
 - Domain Validations
-- CQRS (Consistência Imediata)
+- CQRS
 - Event Sourcing
 - Unit of Work
 - Repository
