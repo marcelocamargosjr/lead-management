@@ -1,0 +1,117 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+
+        <!-- CONTENT GOES HERE -->
+        <div class="h-400 min-h-400 max-h-400 border-2 border-dashed border-gray-300 rounded-2xl">
+
+            <mat-tab-group>
+
+                <mat-tab label="Invited">
+
+                    <!-- Card #65 -->
+                    <fuse-card class="flex flex-col w-full filter-post mb-4 sm:mb-6" *ngFor="let item of invited">
+                        <div class="flex items-center mx-6 sm:mx-8 mt-6 mb-1">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full mr-4 text-lg uppercase bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-200">
+                                {{item.contactFirstName.charAt(0)}}
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold leading-none">{{item.contactFirstName}}</span>
+                                <span class="text-sm text-secondary leading-none mt-1">{{item.creationDate | date:'medium'}}</span>
+                            </div>
+                        </div>
+                        <div class="m-6 sm:mx-8">
+                            <p>
+                                {{item.description}}
+                            </p>
+                        </div>
+                        <div class="flex items-center mx-3 sm:mx-5">
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                <span class="ml-2">{{item.suburb}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:briefcase'"></mat-icon>
+                                <span class="ml-2">{{item.category}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'mat_solid:monetization_on'"></mat-icon>
+                                <span class="ml-2"><strong>{{item.price | currency}}</strong></span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <span><strong>Job ID:</strong></span>
+                                <span class="ml-2">{{item.jobId}}</span>
+                            </span>
+                        </div>
+                        <hr class="border-b mx-6 sm:mx-8 mt-4 mb-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center mx-6 sm:mx-8 mb-4 sm:mb-6">
+                            <div class="hidden sm:flex flex-auto"></div>
+                            <div class="flex items-center mt-4 sm:mt-0">
+                                <button class="px-3 mr-1 -ml-2 sm:ml-0" mat-button (click)="accept(item.id)">
+                                    Accept
+                                </button>
+                                <button class="px-3 sm:-mr-3" mat-button (click)="decline(item.id)">
+                                    Decline
+                                </button>
+                            </div>
+                        </div>
+                    </fuse-card>
+
+                </mat-tab>
+
+                <mat-tab label="Accepted">
+
+                    <!-- Card #65 -->
+                    <fuse-card class="flex flex-col w-full filter-post mb-4 sm:mb-6" *ngFor="let item of accepted">
+                        <div class="flex items-center mx-6 sm:mx-8 mt-6 mb-1">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full mr-4 text-lg uppercase bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-200">
+                                {{item.contactFirstName.charAt(0)}}
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-semibold leading-none">{{item.contactFullName}}</span>
+                                <span class="text-sm text-secondary leading-none mt-1">{{item.creationDate | date:'medium'}}</span>
+                            </div>
+                        </div>
+                        <div class="m-6 sm:mx-8">
+                            <p>
+                                {{item.description}}
+                            </p>
+                        </div>
+                        <div class="flex items-center mx-3 sm:mx-5 mb-4 sm:mb-6">
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                <span class="ml-2">{{item.suburb}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:briefcase'"></mat-icon>
+                                <span class="ml-2">{{item.category}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'mat_solid:monetization_on'"></mat-icon>
+                                <span class="ml-2"><strong>{{item.price | currency}}</strong></span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:phone'"></mat-icon>
+                                <span class="ml-2">{{item.contactPhoneNumber}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                                <span class="ml-2">{{item.contactEmail}}</span>
+                            </span>
+                            <span class="px-3 mr-1" mat-button>
+                                <span><strong>Job ID:</strong></span>
+                                <span class="ml-2">{{item.jobId}}</span>
+                            </span>
+                        </div>
+                    </fuse-card>
+
+                </mat-tab>
+
+            </mat-tab-group>
+
+        </div>
+
+    </div>
+
+</div>
