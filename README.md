@@ -36,7 +36,7 @@ Se você gostou do projeto ou se te ajudou, por favor dê uma estrela ;)
 - Repository
 
 ## Estamos On-line:
-Veja o projeto em execução na <a href="https://lead-management-api.azurewebsites.net/swagger/index.html" target="_blank">Azure</a>
+Veja o projeto em execução: <a href="https://lead-management-api.azurewebsites.net/swagger/index.html" target="_blank">API</a> | <a href="https://lead-management-ui.azurewebsites.net/example" target="_blank">UI</a>
 
 ## Contribution
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir um [issue](https://github.com/marcelocamargosjr/lead-management/issues/new) ou criar um pull request.
